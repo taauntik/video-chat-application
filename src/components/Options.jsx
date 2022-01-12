@@ -64,7 +64,12 @@ function Options({ children }) {
                 onChange={(e) => setName(e.target.value)}
                 fullWidth
               />
-              <CopyToClipboard text={me} className={classes.margin}>
+              {console.log(me)}
+              <CopyToClipboard
+                text={me}
+                className={classes.margin}
+                onCopy={() => console.log("Copied")}
+              >
                 <Button
                   variant="contained"
                   color="primary"
